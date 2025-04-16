@@ -17,6 +17,7 @@ namespace NodeCanvas.Tasks.Actions {
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
+			// Movement can be called in OnExecute because the action is done every frame
 			agent.transform.position += new Vector3(speed.value, 0, 0) * Time.deltaTime;
 			EndAction(true);
         }

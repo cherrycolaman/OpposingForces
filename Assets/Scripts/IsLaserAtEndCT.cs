@@ -25,6 +25,7 @@ namespace NodeCanvas.Tasks.Conditions {
 		//Called once per frame while the condition is active.
 		//Return whether the condition is success or failure.
 		protected override bool OnCheck() {
+			// if laser is at left or right edge of arena, switch direction
 			if (agent.transform.position.x > 35 || agent.transform.position.x < -35)
 			{
 				return true;

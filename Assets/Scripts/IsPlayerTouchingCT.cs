@@ -27,7 +27,7 @@ namespace NodeCanvas.Tasks.Conditions {
 		//Called once per frame while the condition is active.
 		//Return whether the condition is success or failure.
 		protected override bool OnCheck() {
-			if(Mathf.Abs(playerTransform.value.position.x - agent.transform.position.x) < 0.75)
+			if(Mathf.Abs(playerTransform.value.position.x - agent.transform.position.x) < 0.75 && playerTransform.value.position.y > -999)
 			{
 				return true;
 			}
